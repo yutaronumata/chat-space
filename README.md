@@ -1,8 +1,8 @@
 # users
 
 ## association
+- has_many :groups through: :members
 - has_many :massages
-- has_many :groups
 - has_many :members
 
 ## table
@@ -17,7 +17,7 @@
 # groups
 
 ## association
-- has_many :users
+- has_many :users through: :members
 - has_many :massages
 - has_many :members
 
