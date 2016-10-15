@@ -2,12 +2,13 @@
 
 ## association
 - has_many :massages
-- belongs_to :groups
+- has_many :groups
+- has_many :members
 
 ## table
-- t.string :name, null: false
-- t.string :email, null: false
-- t.string :pass, null: false
+- name :string, null: false
+- email :string, null: false
+- pass :string, null: false
   - add_index :users, :email, unique: ture
 
 
@@ -17,10 +18,11 @@
 
 ## association
 - has_many :users
-- has_many :messagess
+- has_many :massages
+- has_many :members
 
 ## table
-- t.string :name null: false
+- name :string, null: false
 
 
 
@@ -32,8 +34,8 @@
 - belongs_to :user
 
 ## table
-- t.references :user, foreign_key: true
-- t.references :group, foreign_key: true
+- references :user, foreign_key: true
+- references :group, foreign_key: true
 
 
 
@@ -45,7 +47,7 @@
 - belongs_to :group
 
 ## table
-- t.text :body, null: false
-- t.string :image
-- t.references :user, foreign_key: true
-- t.references :group, foreign_key: true
+- body :text, null: false
+- image :string
+- references :user, foreign_key: true
+- references :group, foreign_key: true
