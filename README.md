@@ -41,8 +41,8 @@
 # massages
 
 ## association
-belongs_to :user
-belongs_to :group
+- belongs_to :user
+- belongs_to :group
 
 ## table
 - t.text :body, null: false
