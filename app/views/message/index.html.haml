@@ -1,0 +1,56 @@
+.chat
+  .chat__side
+    .chat__header
+      .chat__header--user yutaro
+      .chat__header--actions
+        %a.chat__icon{:href => ""}
+          %i.fa.fa-pencil-square-o.fa-lg
+        %a.chat__icon{:href => ""}
+          %i.fa.fa-cog.fa-lg
+
+    %ul.chat__lists
+      %li.chat__list
+        .chat__list--name sample
+        .chat__list--message まだメッセージはありません。
+
+      %li.chat__list
+        .chat__list--name sample2
+        .chat__list--message まだメッセージはありません。
+
+
+  .chat__main
+
+    .chat__header
+      .chat__header--group
+        .chat__header--groupname
+          sample
+        .chat__header--groupmembers
+          Members: yutaro
+      .chat__header--btn
+        Edit
+    
+    .chat__body
+      %ul.chat__messages
+        %li.chat__message
+          .chat__message--group
+            .chat__message--name
+              yutaro numata
+            .chat__message--day
+              2016/10/25 12:57:00
+          .chat__message--body test
+
+        %li.chat__message
+          .chat__message--group
+            .chat__message--name
+              yutaro numata
+            .chat__message--day
+              2016/10/25 12:58:00
+          .chat__message--body test2
+
+    .chat__footer
+      %form.chat__footer--messages
+      .chat__footer--message
+        %textarea
+        %label.chat__footer--file
+          %i.fa.fa-image
+      %input{:type =>"submit",:name =>"commit",:value =>"Send",:data_disable_with =>"Send"}

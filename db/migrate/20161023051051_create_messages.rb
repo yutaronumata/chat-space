@@ -1,6 +1,6 @@
-class CreateMassages < ActiveRecord::Migration[5.0]
+class CreateMessages < ActiveRecord::Migration[5.0]
   def change
-    create_table :massages do |t|
+    create_table :messages do |t|
       t.text :body, null: false
       t.string :image
       t.references :user, foreign_key: true
@@ -10,3 +10,5 @@ class CreateMassages < ActiveRecord::Migration[5.0]
     end
   end
 end
+
+
