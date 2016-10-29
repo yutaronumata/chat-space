@@ -51,6 +51,7 @@
       %form.chat__footer--messages
       .chat__footer--message
         %textarea
-        %label.chat__footer--file
-          %i.fa.fa-image
+        .chat__footer--file
+          %a{:href => ""}
+            %i.fa.fa-image
       %input{:type =>"submit",:name =>"commit",:value =>"Send",:data_disable_with =>"Send"}

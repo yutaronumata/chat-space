@@ -7,11 +7,12 @@
     float: left;
     background-color: #2f3e51;
     width: 20%;
+    min-height: 120vh;
     @include clearfix();
 
     .chat__header {
       background-color: #253141;
-      height: 60px;
+      height: 20%;
       padding: 20px;
       @include clearfix();
 
@@ -36,7 +37,8 @@
     }
 
     .chat__lists {
-      min-height: 800px;
+      height: 80%;  
+      overflow-y: scroll;
 
       .chat__list {
         list-style: none;
@@ -59,9 +61,12 @@
   .chat__main {
     float: left;
     width: 80%;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
 
     .chat__header {
-      border-bottom: #eee solid 2px;
+      border-bottom: #eee solid 1px;
       height: 98px;
       @include clearfix();
       padding: 0 40px;
@@ -94,8 +99,12 @@
     .chat__body {
       padding: 0 40px;
       height: 80vh;
+      position: relative;
 
       .chat__messages {
+        position: absolute;
+        right: 40px;
+        left: 40px;
         display: block;
 
         .chat__message {
@@ -116,33 +125,34 @@
             .chat__message--day {
               float: left;
               font-size: 12px;
-              color: #aaa;
+              color: #999;
               margin-left: 10px;
             }
           }
           &--body {
             font-size: 14px;
             color: #434a54;
-            margin: 10px 0 40px 0
+            margin: 10px 0 40px 0;
           }
         }
       }
     }
 
     .chat__footer {
-      position: fixed;
+      position: absolute;
       right: 0;
       bottom: 0;
-      left: 273px;
+      left: 0;
       padding:20px 40px;
-      background-color: #aaa;
+      background-color: #ddd;
+      height: 50px;
 
       .chat__footer--message {
         float: left;
         width: calc(100% - 115px);
         height: 50px;
         position: relative;
-      }
+      
 
         textarea {
           float: left;
@@ -155,14 +165,21 @@
           display: block;
         }
 
-        label {
+        .chat__footer--file {
           position: absolute;
           top: 12px;
           right: 15px;
+          a {
+            i.fa {
+              color: black;
+            }
+          }
         }
+      }
 
       input {
         float: left;
+        position: fixed;
         display: inline-block;
         width: 100px;
         margin-left: 15px;
@@ -171,7 +188,6 @@
         background-color: #38aef0;
         text-align: center;
         border: none;
-        padding: 0
       }
     }
   }
